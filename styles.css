@@ -181,6 +181,31 @@ h1 {
   		 transform: scale(3); /* paasei */
   		 margin: 15px;
 	}
+	
+/* Ochtend: 06:00 – 11:59 */
+#bewegende-cirkel.kleurochtend{
+	right: 0vh;
+	top: 25vh;
+}
+
+
+/* Middag: 12:00 – 18:59 */
+#bewegende-cirkel.kleurmiddag{
+	right: 0vh;
+	top: 0vh;
+}
+
+/* Avond: 18:00 – 23:59 */
+#bewegende-cirkel.kleuravond{
+	right: 25vh;
+	top: 0vh;
+}
+
+/* Nacht: 23:59; – 06:59; */
+#bewegende-cirkel.kleuravond{
+	right: 50vh;
+	top: 50vh;
+}
 }
 
 /* Breakpoint grote desktop */
