@@ -1,0 +1,204 @@
+body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	letter-spacing: 0.15em;
+	height: 100vh;
+	transition: background-color 120s ease, color 1s ease;
+	transition-delay: 0s, 60s;
+	background-color: #F2DBD6;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	color: #3D3440;
+}
+
+h1 {
+	margin-bottom: 5px;
+	}
+
+#tijdsweergave {
+	display: flex;
+	flex-flow: column;	
+	align-items: center;
+}
+
+/* stilstaande donkere cirkel */ 
+#stilstaande-cirkel {
+	width: 50vw;
+	height: 50vw;
+	background-color: #685653;
+	opacity: 0.5;
+	border-radius: 25vw;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 120s ease;
+}
+
+/* gekleurd vlak die overeenkomt met de achtergrond */
+#bewegende-cirkel {
+	transition: right 120s ease, top 120s ease, background-color 120s ease;
+	margin: 0px;
+	width: 50vw;
+	height: 50vw;
+	background-color: #F2DBD6;
+	border-radius: 25vw;
+	box-shadow: inset 0px 0px 15px rgba(104,86,83,1);
+	position: absolute;
+}
+
+/* Ochtend: 06:00 – 11:59 */
+.kleurochtend {
+	background-color: #F2DBD6 !important;
+	color: #3D3440;
+}
+
+#bewegende-cirkel.kleurochtend{
+	right: 0vw;
+	top: 25vw;
+}
+
+#stilstaande-cirkel.kleurochtend {
+	background-color: #685653 !important;
+}
+
+/* Middag: 12:00 – 18:59 */
+.kleurmiddag {
+	background-color: #DC8971 !important;
+	color: #16151E;
+}
+
+#bewegende-cirkel.kleurmiddag{
+	right: 0vw;
+	top: 0vw;
+}
+
+#stilstaande-cirkel.kleurmiddag {
+	background-color: #49251F !important;
+}
+
+/* Avond: 18:00 – 23:59 */
+.kleuravond {
+	background-color: #3D3440 !important;
+	color: #F2DBD6;
+}
+
+#bewegende-cirkel.kleuravond{
+	right: 25vw;
+	top: 0vw;
+}
+
+#stilstaande-cirkel.kleuravond {
+	background-color: #1C1021 !important;
+}
+
+/* Nacht: 23:59; – 06:59; */
+.kleurnacht {
+	background-color: #16151E !important;
+	color: #FFF4D1;
+}
+
+#bewegende-cirkel.kleuravond{
+	right: 50vw;
+	top: 50vw;
+}
+
+#stilstaande-cirkel.kleurnacht {
+	background-color: #000000 !important;
+}
+
+/* Breakpoint iPad */
+@media only screen and (min-width: 500px) {
+	body {
+		flex-flow: column-reverse;
+	}
+
+	#tijdsweergave {
+		margin: 10vw;
+	}
+
+	h1 {
+		font-size: 72px;
+	}
+
+	span {
+		font-size: 24px;
+		margin-left: 15px;
+	}
+
+	#checkbox {
+		 -ms-transform: scale(2); /* Internet Explorer */
+ 		 -moz-transform: scale(2); /* Firefox */
+  		 -webkit-transform: scale(2); /* Safari and Chrome */
+  		 -o-transform: scale(2); /* Opera */
+  		 transform: scale(2); /* paasei */
+	}
+
+}
+
+/* Breakpoint kleine desktop */
+@media (min-width: 1200px) {
+	body {
+		flex-flow: row-reverse;
+	}
+
+	/* stilstaande donkere cirkel */ 
+	#stilstaande-cirkel {
+	width: 50vh;
+	height: 50vh;
+	border-radius: 25vh;
+}
+
+/* gekleurd vlak die overeenkomt met de achtergrond */
+	#bewegende-cirkel {
+	width: 50vh;
+	height: 50vh;
+	border-radius: 25vh;
+	}
+
+	#tijdsweergave {
+		margin: 10vw;
+
+	}
+
+	h1 {
+		font-size: 96px;
+		margin-bottom: 5px;
+	}
+
+	span {
+		font-size: 32px;
+	}
+
+	#checkbox {
+		 -ms-transform: scale(3); /* Internet Explorer */
+ 		 -moz-transform: scale(3); /* Firefox */
+  		 -webkit-transform: scale(3); /* Safari and Chrome */
+  		 -o-transform: scale(3); /* Opera */
+  		 transform: scale(3); /* paasei */
+  		 margin: 15px;
+	}
+}
+
+/* Breakpoint grote desktop */
+@media (min-width: 1800px){
+	h1 {
+		font-size: 125px;
+		margin-bottom: 5px;
+	}
+
+	span {
+		font-size: 42px;
+	}
+
+	#checkbox {
+		 -ms-transform: scale(4); /* Internet Explorer */
+ 		 -moz-transform: scale(4); /* Firefox */
+  		 -webkit-transform: scale(4); /* Safari and Chrome */
+  		 -o-transform: scale(4); /* Opera */
+  		 transform: scale(4); /* paasei */
+  		 margin: 15px;
+	}
+}
+
