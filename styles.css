@@ -159,7 +159,8 @@ h1 {
 
 	#tijdsweergave {
 		margin: 10vw;
-
+		width:400px;
+		align-items: flex-start;
 	}
 
 	h1 {
@@ -168,8 +169,7 @@ h1 {
 	}
 
 	span {
-		width:400px;
-		text-align: center;
+
 		font-size: 32px;
 	}
 
