@@ -56,7 +56,7 @@ else {
 
 function start() {
 	update();
-	var interval = setInterval(update, 1000);
+	var interval = setInterval(update, 250);
 }
 
 function versnelTijd(){
